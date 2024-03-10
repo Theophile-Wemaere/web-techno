@@ -20,13 +20,13 @@ public class ReadCookie extends HttpServlet{
         }
 
         String responseContent = "<head><link rel='stylesheet' href='CSS/styles.css' /></head>"
-                + "<table>"
+                + "<div class='centered'><table>"
                 + "<tr><th>Name</th><th>Value</th><th>Max Age</th></tr>";
         for (Cookie cookie : cookies) {
             responseContent += String.format("<tr><td>%s</td><td>%s</td><td>%s</td></tr>", cookie.getName(), cookie.getValue(), cookie.getMaxAge());
         }
 
-        responseContent += "</table>";
+        responseContent += "</table></div>";
 
         response.setContentType("text/html");
         response.getWriter().write(responseContent);

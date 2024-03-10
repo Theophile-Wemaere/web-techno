@@ -1,9 +1,7 @@
 <%@ page import="com.isep.tp1.bean.Person" %>
 <%
-    // Create a new Person object
     Person person = new Person();
 
-    // Set properties from request parameters
     person.setFirstName(request.getParameter("firstName"));
     person.setLastName(request.getParameter("lastName"));
     person.setBirthDay(request.getParameter("birthDate"));

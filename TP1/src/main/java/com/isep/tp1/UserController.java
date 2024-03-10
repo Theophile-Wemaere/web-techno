@@ -34,7 +34,6 @@ public class UserController extends HttpServlet {
         sexCookie.setMaxAge(maxAge);
         response.addCookie(sexCookie);
 
-        // Create HTML table with retrieved data
         String responseContent =
                 "<head><link rel='stylesheet' href='CSS/styles.css' /></head>" +
                 "<div class='centered'><h2>Person Details</h2><table>" +
@@ -45,7 +44,6 @@ public class UserController extends HttpServlet {
                         "</table>"
                 + "<a href='index.html'>Go back</a></div>";
 
-        // Set response content type and write response
         response.setContentType("text/html");
         response.getWriter().write(responseContent);
     }

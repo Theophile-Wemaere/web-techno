@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="TP1-MVC">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="TP1-MVC.war" />
+  </artifact>
+</component>

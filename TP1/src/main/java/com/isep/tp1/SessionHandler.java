@@ -36,10 +36,14 @@ public class SessionHandler extends HttpServlet {
         boolean visitedBefore = session.getAttribute("visitedBefore") != null;
         String message;
         if (visitedBefore) {
-            message = "Welcome back!";
+            int count = (int) session.getAttribute("visitCount") + 1;
+            session.setAttribute("visitCount",count);
+            message = "Welcome back! You have visited this page "
+                    + Integer.toString(count) + " times";
         } else {
             message = "Welcome on my site!";
             session.setAttribute("visitedBefore", true);
+            session.setAttribute("visitCount", 1);
         }
 
         String responseContent = "<head><link rel='stylesheet' href='CSS/styles.css' /></head>"

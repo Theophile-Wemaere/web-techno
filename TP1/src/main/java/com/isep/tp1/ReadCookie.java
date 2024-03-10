@@ -26,7 +26,9 @@ public class ReadCookie extends HttpServlet{
             responseContent += String.format("<tr><td>%s</td><td>%s</td><td>%s</td></tr>", cookie.getName(), cookie.getValue(), cookie.getMaxAge());
         }
 
-        responseContent += "</table></div>";
+        responseContent += "</table>" +
+                "<a href='index.html'>Go back</a>"
+                + "</div>";
 
         response.setContentType("text/html");
         response.getWriter().write(responseContent);

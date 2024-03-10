@@ -1,5 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>TP1</title>
@@ -7,12 +8,9 @@
 </head>
 <body>
 <div class="centered">
-    <h1>Simple Item list form</h1>
-    <form action="list-items" method="POST">
-        Item: <input type="text" name="newItem">
-        <p>
-            <input type="submit">
-    </form>
+    <h1>Your Random Number:</h1>
+    <p>Here's a random number between 0 and 1 : <%= Math.random() %>
+    </p>
     <a href='index.html'>Go back</a>
 </div>
 </body>

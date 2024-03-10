@@ -6,44 +6,62 @@
     <link rel="stylesheet" href="CSS/styles.css"/>
 </head>
 <body>
-<h1>Simple POST form</h1>
-<form action="user-controller" method="post">
-    <label for="firstName">First Name:</label>
-    <input type="text" name="firstName" id="firstName" required>
-    <br>
-    <label for="lastName">Last Name:</label>
-    <input type="text" name="lastName" id="lastName" required>
-    <br>
-    <label for="birthDate">Birth Date (MM/DD/YYYY):</label>
-    <input type="date" name="birthDate" id="birthDate" required>
-    <br>
-    <br>
-    <label>Sex:</label>
-    <br>
-    <div class="row">
-        <input type="radio" name="sex" id="male" value="male" required>
-        <label for="male">Male</label>
-    </div>
-    <br>
-    <div class="row">
-        <input type="radio" name="sex" id="female" value="female" required>
-        <label for="female">Female</label>
-    </div>
-    <br>
-    <br>
-    <input type="submit" style="margin-top: 20px;" value="Submit">
-    <a href="read-cookie">
-        Read your cookies
-    </a>
-    <a href="count-cookie">
-        Count your cookies
-    </a>
-    <a href="session-handler">
-        Test your session
-    </a>
-    <a href="items.html">
-        Items
-    </a>
-</form>
+<div class="centered">
+    <h1>Simple POST form</h1>
+    <form id="formTP1" action="user-controller" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" required>
+        <br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" required>
+        <br>
+        <label for="birthDate">Birth Date (MM/DD/YYYY):</label>
+        <input type="date" name="birthDate" id="birthDate" required>
+        <br>
+        <br>
+        <label>Sex:</label>
+        <br>
+        <div class="row">
+            <input type="radio" name="sex" id="male" value="male" required>
+            <label for="male">Male</label>
+        </div>
+        <br>
+        <div class="row">
+            <input type="radio" name="sex" id="female" value="female" required>
+            <label for="female">Female</label>
+        </div>
+        <br>
+        <br>
+        <input type="submit" style="margin-top: 20px;" value="Submit (Java Servlet)">
+        <input type="submit" style="margin-top: 20px;" onclick="changeEndpoint()" value="Submit (JSP Bean)">
+        <script>
+            function changeEndpoint() {
+                document.getElementById("formTP1").action = "bean.jsp";
+            }
+        </script>
+    </form>
+    <table style="margin-top: 20px;">
+        <tr>
+            <th>1. Java Servlet</th>
+            <th>2. Java Server Page (JSP)</th>
+        </tr>
+
+        <tr>
+            <td><a href="read-cookie">Read your cookies</a></td>
+            <td><a href="expression.jsp">expression.jsp</a></td>
+        </tr>
+        <tr>
+            <td><a href="count-cookie">Count your cookies</a></td>
+            <td><a href="scriptlet.jsp">scriplet.jsp</a></td>
+        </tr>
+        <tr>
+            <td><a href="session-handler">Test your session</a></td>
+            <td><a href="declaration.jsp">declaration.jsp</a></td>
+        </tr>
+        <tr>
+            <td><a href="items.html">Items</a></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

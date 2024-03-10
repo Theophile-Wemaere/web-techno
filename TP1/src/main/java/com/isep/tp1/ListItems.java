@@ -63,7 +63,9 @@ public class ListItems extends HttpServlet {
             responseContent += "</ul>";
         }
 
-        responseContent += "<a href='items.html'>Add items to the list</a></div>";
+        responseContent += "<a href='items.html'>Add items to the list</a>" +
+                "<a href='index.html'>Go back</a>"
+                + "</div>";
 
         response.setContentType("text/html");
         response.getWriter().write(responseContent);

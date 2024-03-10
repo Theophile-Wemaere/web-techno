@@ -37,12 +37,13 @@ public class UserController extends HttpServlet {
         // Create HTML table with retrieved data
         String responseContent =
                 "<head><link rel='stylesheet' href='CSS/styles.css' /></head>" +
-                "<table>" +
+                "<div class='centered'><h2>Person Details</h2><table>" +
                         "<tr><td>First Name</td><td>" + firstName + "</td></tr>" +
                         "<tr><td>Last Name</td><td>" + lastName + "</td></tr>" +
                         "<tr><td>Birth Date</td><td>" + birthDate + "</td></tr>" +
                         "<tr><td>Sex</td><td>" + sex + "</td></tr>" +
-                        "</table>";
+                        "</table>"
+                + "<a href='index.html'>Go back</a></div>";
 
         // Set response content type and write response
         response.setContentType("text/html");

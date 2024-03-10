@@ -75,7 +75,7 @@ public class SessionHandler extends HttpServlet {
 
         }
 
-        responseContent += "<a href='session-handler?action=logout'>destroy my session</a></div>";
+        responseContent += "<a href='session-handler?action=logout'>destroy my session</a><a href='index.html'>Go back</a></div>";
 
         response.setContentType("text/html");
         response.getWriter().write(responseContent);

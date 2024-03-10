@@ -27,7 +27,9 @@ public class CountCookie extends HttpServlet{
         response.addCookie(counter);
 
         String responseContent = "<head><link rel='stylesheet' href='CSS/styles.css' /></head>"
-            + "<div class='centered'><h2>You visited this page exactly " + Integer.toString(count) + " times !</h2></div>";
+            + "<div class='centered'><h2>You visited this page exactly " + Integer.toString(count) + " times !</h2>" +
+                "<a href='index.html'>Go back</a>"
+                + "</div>";
 
         response.setContentType("text/html");
         response.getWriter().write(responseContent);

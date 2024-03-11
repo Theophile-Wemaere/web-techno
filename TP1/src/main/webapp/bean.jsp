@@ -1,13 +1,12 @@
-<%@ page import="com.isep.tp1.bean.Person" %>
-<%
-    Person person = new Person();
-
-    person.setFirstName(request.getParameter("firstName"));
-    person.setLastName(request.getParameter("lastName"));
-    person.setBirthDay(request.getParameter("birthDate"));
-    person.setSex(request.getParameter("sex"));
-%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.isep.tp1.bean.Person" %>
+<jsp:useBean id="person" class="com.isep.tp1.bean.Person" scope="request"/>
+
+<jsp:setProperty name="person" property="firstName" value="${param.firstName}"/>
+<jsp:setProperty name="person" property="lastName" value="${param.lastName}"/>
+<jsp:setProperty name="person" property="birthDay" value="${param.birthDate}"/>
+<jsp:setProperty name="person" property="sex" value="${param.sex}"/>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -18,10 +17,10 @@
 <div class="centered">
     <h2>Person Details</h2>
     <table>
-        <tr><td>First Name</td><td><%= person.getFirstName() %></td></tr>
-        <tr><td>Last Name</td><td><%= person.getLastName() %></td></tr>
-        <tr><td>Birth Date</td><td><%= person.getBirthDay() %></td></tr>
-        <tr><td>Sex</td><td><%= person.getSex() %></td></tr>
+        <tr><td>First Name</td><td><jsp:getProperty name="person" property="firstName"/></td></tr>
+        <tr><td>Last Name</td><td><jsp:getProperty name="person" property="lastName"/></td></tr>
+        <tr><td>Birth Date</td><td><jsp:getProperty name="person" property="birthDay"/></td></tr>
+        <tr><td>Sex</td><td><jsp:getProperty name="person" property="sex"/></td></tr>
     </table>
     <a href="index.html">Go back</a>
 </div>

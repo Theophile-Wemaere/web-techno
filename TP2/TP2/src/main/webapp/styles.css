@@ -1,0 +1,55 @@
+body {
+    font-family: Arial;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.input-button {
+    width: 15%;
+    box-shadow: 2px 2px 2px red;
+}
+
+input {
+    background-color: #FFF3F3;
+    border-radius: 5px;
+    border-color: red;
+    width: 40%;
+    display: block;
+}
+
+input:hover {
+    background-color: white;
+}
+
+fieldset {
+    border-color: red;
+    border-radius: 5px;
+}
+
+fieldset legend {
+    color: red;
+    font-weight: bold;
+}
+
+fieldset label {
+    font-weight: bold;
+    display: block;
+    width: 30%;
+    text-align: right;
+    margin-right: 20%;
+}

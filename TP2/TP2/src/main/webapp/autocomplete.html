@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autocomplete Example</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            var cities = [
+                "New York",
+                "Los Angeles",
+                "Chicago",
+                "Houston",
+                "Philadelphia",
+                "Phoenix",
+                "San Antonio",
+                "San Diego",
+                "Dallas",
+                "San Jose"
+            ];
+            $( "#city" ).autocomplete({
+                source: cities
+            });
+        } );
+    </script>
+</head>
+<body>
+<label for="city">City:</label>
+<input id="city">
+<a href="index.html">Go back</a>
+</body>
+</html>
